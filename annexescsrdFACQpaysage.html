@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<title>FACQ Belgium — Annexes CSRD 2026</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#0d1117;--ink2:#2a2f3b;--ink3:#5b6070;--ink4:#8e95a3;
+  --paper:#f8f6f1;--paper2:#eeeae0;--paper3:#e4dfd2;
+  --gold:#b8893a;--gold2:#d4a85c;--gold3:#f0cc88;
+  --crimson:#b5281e;--sage:#1f6647;--sage2:#2d8c60;--sage3:#e4f2eb;
+  --navy:#1a3560;--navy2:#2a4d80;--navy3:#e6edf7;
+  --amber:#b06000;--amber2:#e07b00;--amber3:#fdf2e0;
+  --rule:rgba(13,17,23,.1);--rule2:rgba(13,17,23,.06);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:13px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:#d0cbc0;line-height:1.6}
+.page{width:297mm;min-height:210mm;background:var(--paper);margin:10mm auto;position:relative;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,.18);display:flex;flex-direction:column}
+.page-inner{padding:10mm 24mm 10mm;flex:1;display:flex;flex-direction:column}
+.page-footer{height:9mm;padding:0 24mm;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--rule);font-family:'DM Mono',monospace;font-size:9px;color:var(--ink4);letter-spacing:.06em;flex-shrink:0}
+.page-footer .pf-center{text-align:center;flex:1}
+h2{font-family:'Libre Baskerville',serif;font-size:19px;font-weight:700;color:var(--ink);line-height:1.15}
+.sec-head{display:flex;align-items:baseline;gap:12px;border-top:2px solid var(--ink);padding-top:10px;margin-bottom:16px}
+.sec-num{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);flex-shrink:0}
+.sub-head{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--rule);margin-top:16px}
+.sub-head:first-child{margin-top:0}
+p{color:var(--ink2);margin-bottom:8px;font-size:11.5px;line-height:1.65}
+/* ANNEXE TABLE */
+.ann-tbl{width:100%;border-collapse:collapse;font-size:10.5px;margin-bottom:14px}
+.ann-tbl thead th{text-align:left;padding:7px 8px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);border-bottom:2px solid var(--ink);background:var(--paper2)}
+.ann-tbl tbody tr{border-bottom:1px solid var(--rule2)}
+.ann-tbl tbody tr:hover{background:var(--paper2)}
+.ann-tbl tbody td{padding:8px 8px;vertical-align:top;color:var(--ink2)}
+.ann-tbl .code{font-family:'DM Mono',monospace;font-size:9px;font-weight:500;color:var(--ink);white-space:nowrap}
+.ann-tbl .dr{font-family:'DM Mono',monospace;font-size:8.5px;color:var(--ink3);white-space:nowrap}
+.ann-tbl .nom{font-size:10.5px;color:var(--ink2);line-height:1.4}
+.ann-tbl .dept{font-size:9.5px;color:var(--ink3);line-height:1.35}
+/* PRIORITY BADGES */
+.bdg{display:inline-block;padding:2px 6px;border-radius:2px;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;white-space:nowrap}
+.bdg-p1{background:#fce8e8;color:var(--crimson)}
+.bdg-p2{background:var(--amber3);color:var(--amber)}
+.bdg-p3{background:var(--navy3);color:var(--navy)}
+.bdg-ok{background:var(--sage3);color:var(--sage)}
+/* ESRS STANDARD BADGES */
+.std-e{background:var(--sage3);color:var(--sage);display:inline-block;padding:1px 5px;border-radius:2px;font-family:'DM Mono',monospace;font-size:8px;font-weight:700}
+.std-s{background:var(--navy3);color:var(--navy);display:inline-block;padding:1px 5px;border-radius:2px;font-family:'DM Mono',monospace;font-size:8px;font-weight:700}
+.std-g{background:var(--paper2);color:var(--ink);display:inline-block;padding:1px 5px;border-radius:2px;font-family:'DM Mono',monospace;font-size:8px;font-weight:700;border:1px solid var(--rule)}
+/* COVER ANNEXE */
+.cover{background:var(--ink);color:var(--paper);min-height:210mm;position:relative;overflow:hidden}
+.cover-inner{padding:14mm 28mm 14mm;display:flex;flex-direction:column;height:100%;justify-content:space-between;position:relative;z-index:1}
+.cover-noise{position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 5% 100%,rgba(184,137,58,.2) 0%,transparent 55%),radial-gradient(ellipse 70% 60% at 100% 0%,rgba(26,53,96,.5) 0%,transparent 55%);pointer-events:none}
+.cover-stripe{position:absolute;top:0;right:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--gold),transparent 60%)}
+/* STAT CARDS */
+.stat-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:14px}
+.stat-card{background:var(--paper);padding:10px 8px;text-align:center}
+.stat-n{font-family:'Libre Baskerville',serif;font-size:22px;font-weight:700;line-height:1}
+.stat-l{font-size:9px;color:var(--ink3);margin-top:3px;font-weight:500}
+.stat-s{font-family:'DM Mono',monospace;font-size:8px;color:var(--ink4);margin-top:2px}
+/* CALLOUT */
+.callout{border-left:3px solid var(--gold);background:var(--paper2);padding:10px 12px;border-radius:0 3px 3px 0;margin-bottom:10px}
+.callout.red{border-color:var(--crimson);background:#fdf0f0}
+.callout.navy{border-color:var(--navy);background:var(--navy3)}
+.callout.green{border-color:var(--sage);background:var(--sage3)}
+.callout-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink4);margin-bottom:4px}
+.callout p{margin:0;font-size:11px;color:var(--ink)}
+/* B ANNEX — synthèse par standard */
+.std-row{display:grid;grid-template-columns:60px 1fr 80px 80px 80px 80px 80px;gap:0;border-bottom:1px solid var(--rule2);align-items:center}
+.std-row.head{background:var(--paper2);border-bottom:2px solid var(--ink)}
+.std-cell{padding:8px 6px;font-size:10.5px;color:var(--ink2)}
+.std-cell.hd{font-family:'DM Mono',monospace;font-size:7.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);padding:7px 6px}
+.std-cell.mono{font-family:'DM Mono',monospace;font-size:9.5px;font-weight:500}
+/* BAR */
+.bar-wrap{height:6px;background:var(--paper3);border-radius:3px;overflow:hidden;margin-top:3px}
+.bar-fill{height:100%;border-radius:3px}
+@media print{
+  @page{size:A4 landscape;margin:10mm 12mm}
+  html{
+    font-size:7.5pt;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  body{background:#fff;margin:0;padding:0}
+  .page{
+    margin:0;
+    box-shadow:none;
+    width:277mm;
+    min-height:190mm;
+    page-break-after:always;
+    overflow:hidden;
+  }
+  .page:last-child{page-break-after:auto}
+  .page-inner{padding:8mm 14mm 6mm;flex:1;display:flex;flex-direction:column}
+  .cover-inner{padding:10mm 16mm 10mm}
+  .cover{min-height:190mm}
+  .tbl tr{page-break-inside:avoid}
+  .ann-tbl tr{page-break-inside:avoid}
+  .callout{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════
+  COUVERTURE ANNEXES
+══════════════════════ -->
+<div class="page">
+<div class="cover">
+  <div class="cover-noise"></div>
+  <div class="cover-stripe"></div>
+  <div class="cover-inner">
+    <div style="display:flex;align-items:center;gap:14px">
+      <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCADIAUADASIAAhEBAxEB/8QAHAABAAIDAAMAAAAAAAAAAAAAAAYHBAUIAQID/8QARxAAAQMCAgQKBwQHBwUAAAAAAAECAwQFBhEHNnOxEhchMTM1cnST0TRBUVJVgcETImFxFBYjMkKRshUkRGJjgpImQ1NUof/EABsBAQACAwEBAAAAAAAAAAAAAAAEBwECAwUG/8QAOREAAQIDAggOAwACAwAAAAAAAAECAwQRBRIGFiExMjNxwRM0NVFTYWJygZGhsdHhIkGCFBUjUvD/2gAMAwEAAhEDEQA/AOMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfSnhlqJmwwRukkcuTWtTNVJTR6PMS1MKS/o8MSLzJJJku4mmiDD8FNaW3ieNHVE/Rqqfut/An52hwryVU+JtbCiJAjrBl0T8ciqvOUnxaYm92k8VfIcWmJvdpPFXyLsB04Bp5ONs/2fL7KT4tMTe7SeKvkOLTE3u0nir5F2AcA0Y2z/Z8vspPi0xN7tJ4q+Q4tMTe7SeKvkXYBwDRjbP8AZ8vspPi0xN7tJ4q+Q4tMTe7SeKvkXYBwDRjbP9ny+yk+LTE3u0nir5Di0xN7tJ4q+RdgHANGNs/2fL7KT4tMTe7SeKvkOLTE3u0nir5F2AcA0Y2z/Z8vspPi0xN7tJ4q+Q4tMTe7SeKvkXYBwDRjbP8AZ8vspPi0xN7tJ4q+Q4tMTe7SeKvkXYBwDRjbP9ny+yk+LTE3u0nir5HpPo4xHDA+Z6UnBY1XLlKvMnyLvMa7dV1WyduMLBREN4eFc856It3L1fZzQACMWSAAAAAAAAAAAAAAAAAAAAAAAAAAAdCYB1Ntfd27jeGjwDqba+7t3G8JrNFCmJ/jMTvL7hyo1FVVRETnVSP3DGWHaGV0U9e1ZGrkrWJwjTaXr3NbbPHR0r1jlqVyV7edG+vJfUUyuarmvKqnN8VWrRD6OxcG2TkFI8Zyoi5kQvaPH2GnyNY2requXJPueslKLmiL7Tmq2xyJcKdVjfkkjf4V9p0nHytRfUqG0J6uzkXCCyIFnJD4JVW9XP1UPYAHU+aAAAAAAAAAAAAAAABi3bquq2LtxlGNduq6rZO3Grsx1gaxu1DmgAEEu4AAAAAAAAAAAAAAAAAAAAAAAAAAA6EwDqba+7t3G8NHgHU2193buN29zWNVzlRrUTNVX1E5mihTE/xmJ3l9yrdOnT2/suIho/ghqcX2+KeNskayoqtcmaKSrTZVU1TPQLTzxyojXZ8ByLkRfR3JHFjG3ySvbGxJOVzlyRCM/TLCsxHNsXJkW67eXwlvoG5ZUcHJ/pp5GUvMfCnqqSpVUp6iKVU5+A5FyPq97I2K+RzWtTnVy5ISmoiJUrWI6I5aOrU9gYS3a2IuX6fTeIh5judvkejI62nc5eZEkQVQzwEX/qvkZQCKipmi5oDJyAMSrulvpHcGprIYnexz0RTH/WCzfEqb/mYqhIbKR3JVGL5GzBj0ldR1jc6aqhmT/I9FMgycnMcxaOSigHpLLFEmcsjWJ7XKiHolZSKqNSogVV9SSNX6mFVEMthvclUQ+wPCuaiZqqIn5nhHsVcke3+ZmprRT2Ma7dV1WyduMkxbt1XVbF241dmOkHWN2oc0gAgl2gAAAAAAAAAAAAAAAAAAAAAAAAAAHQmAdTbX3du4zcRdQXDu0n9KmFgHU2193buNzUQx1NPJTypnHKxWOT2oqZKTWZWlNzTkZOOcv6cvucyPcquXNVX81PCKqLmi5KTnStYLZY5aNLdAsSSoquzdnmR/BNDTXHE1HR1bFfDI/JzUXLMiK1UdQtWBPwo0p/lNRbtFXryEx0Gqrq6vzVV/Zpzr+JrNJuKaytvE1upZ3xUtO7gORq8r3Jz8vsLSsGHLTY3yvt0CxOkTJ2bsygLwqrdqtV51mdvOj1VrEafPWREgWjaMWZRuRESlf/dRjcN/vO/meWSyscjmyPaqcyo7JSxtFmFbPebRNVXGB0z0l4KfeyRENVpVsNusdxpm26N0bJY83NVc0zRTS4t28e0y15d84smiLeTyJHojxTU1kzrNcJXSvRvCge5eVUTnRSSaRr++w2F8lOqJVTLwI19ntUqrRgqpjOi4K5ZqqEw06rnTW7truOjXLwZ8/OWfA/3cNt3I5KqnXlKuqqmoqpnTVEz5ZHLmrnLmqnyNlhmlhrb/AEVLUNV0UkrWvRFyzTMuavwVhptDKqW1iKjFyVHLmnIc2sVyVPftC2IFnvbDei5eYpO03OttdWypo53xuaueSLyL+aHQWG7rHd7BT3NiZcOPNyexyJ95P5opznI3gvc32KqF1aJ1VcCJmvIjpET+am8FVrQ8rCyXhulmxafkiolepSt8cYirrte6pPt3spY5XMija5Ubki5Z/Mj7Z52ORzZpGuTmVHKe1b6bPtHbyyNFmDrLerG+4XKOSaRZXMRqOyRETI50Vyntxo0vZ0sjnJRqUTIRWfGN1mw5HaXzy8OOThJOj8nK31NUYNuVwlxRbo5K6oexZkRWrIqops9KmFqLD9TTTW7hpBUcJFY5c+CqL7TRYH1ttvJn+3QZUU5NWWjSTosFuRUVcx0MY126rqtk7cZJi3bquq2LtxMdmKog6xu1DmkAEEu0AAAAAAAAAAAAAAAAAAAAAAAAAAA6EwDqba+7t3G8NHgHU2193buN4TmaKFLz/GYneX3Ks06dPb+y4imjfXS3bQlenTp7f2XEU0b66W7aEZ+sLBszkP8Al28v5fWc03frWq2zt50spB6jRnZp6iSZ9RVZyOVy5KnrOsVquzHzWDtqS9nuiLGVctP1tPnoSXLDs+2U0enPrKh2a7ye4es9vwtbpIY6hyQq5XudKqJkVRpQv1Pe741KN3Dgp2cBH+8vrVPwMPWkOinoWTWcth81DT8MuXwoY+jDXSh7Skw06+i25f8AO7cQ/RhrpQ9omOnb0S27R240TVqelOcuQdnyQDBetNu27d50FcPQJ9mu459wXrTbtu3edBXD0CfZruNoOip5WF3GoWzec0TdM/tLvLo0Tai/7pN6lLzdM/tKXRomXLAv+6TeppB0j2cKeIt7ybymq302faO3l0aEtUX94d9Cl6302faO3l0aEtUX94d9DEPSNsJuT/FDU6e+itvaf9CA4H1stu3Qn2nvorb2n/QgGCNbLbt0MO0zNlcj+Dt50OY126rqtk7cZJi3bquq2LtxLdmK1g6xu1DmkAEEu0AAAAAAAAAAAAAAAAAAAAAAAAAAA6EwDqba+7t3G8NHgHU2193buN4TmaKFLz/GYneX3Ks06dPb+y4imjfXS3bQlenTp7f2XEU0ba6W7aEZ+sLBszkP+Xby/wDMiuOMaUmH4vsYm/bVzkzZGi5I38VX1fkSStqG01LLUO/djYr3fkicpzfeK6a5XOetqHZvlervyT1IdYr6Zj5rByyGT0Rz4ui39c6mZfcR3e8vVa2resefJE1cmJ8jUE5wFgKS+wNuFdK6CkVfutan3n/P1Ie+luy26xzW+mt0CRMWNVVc81dy+tSOqLSqn3MKflWR0lIWfqzJQ1WjDXSh7Skv06+iW7aO3EQ0Ya6UPaUl+nX0S3bR246Jq1PInOXIOz5IDgvWm3bdu86JVEc1WqmaLzoc7YL1pt23bvOiU5jeBmU8fDHjEPZvNctjtCrmttpv+CH3bTU9LRSRU0LIo0a5eC1Mk5jJzT2nzqfR5Owu47UPlOGiPVEc5V8Tmmt9Nn2jt5dGhLVF/eHfQpet9Nn2jt5dGhLVF/eHfQiQ9IsnCbk/xQ1Gnnord2n/AEIDgjWy27dCfaeeit3af9CA4I1stu3Qw7TM2VyP4O3nQ5jXbquq2TtxkmLduq6rYu3Et2YrWDrG7UOaQAQS7QAAAAAAAAAAAAAAAAAAAAAAAAAADoTAOptr7u3cbw0eAdTbX3du43hOZooUvP8AGYneX3Ks06dPb+y4imjbXS3bQlenTp7f2XEU0b66W7aEZ+sLBszkP+Xby6sXKv6tXLLNP7pKuadlTnNTozF+rVy5P8HL/Spzmoi5zhgfxV69e46H0bpngy2rl/2W7iCaeFzr7av+ku8nujbUq27FCA6dvTrdsnbzLtA86yuWHbXbyN6MNdKHtKS/Tr6Jbto7cRDRhrpQ9pSX6dfRLdtHbgmrU9Wc5cg7PkgOC9abdt27zoOuVW0MyouSoxclOfMF6027bt3nQVw9An2a7jeDmU8nC7jULZvOeJb1dklen9o1P7y/xqW7owqJ6nBX2tRM+V6rJ95y5rzqUlN0z+0pdOifUX5yb1NIK/kethPCY2SarWon5JvKZrfTZ9o7eXRoS1Rf3h30KXrfTZ9o7eXRoS1Rf3h30NYekdsJuT/FDUaeeit3af8AQgOCNbLbt0J9p66K3dp/0IDgjWy27dDDtMzZXI/g7edDmNduq6rZO3GSYt26rqti7cS3ZitYOsbtQ5pABBLtAAAAAAAAAAAAAAAAAAAAAAAAAAAOhMA6m2vu7dxvDR4B1Ntfd27jeE5mihS8/wAZid5fcqzTp09v7LiKaNtdLdtCV6dOnt/ZcRTRvrpbtoRn6wsGzOQ/5dvLqxev/Tdy5P8ABy/0qc5qdJ4gpX11mrKSJFV80LmNy9qplkc3zRvilfFI1WvYqo5qpkqKIqZSNgc9Fl3t/aKX/o3q6X9TLe39JizbEiORXomS+wr/AE219LVXmkgp5myOhi+/wVzyVV5iAsmlY3gsle1PYjlQ95qeqbTx1c0cn2UqqjJHfxZc5qr6toenK2K2WnFmb9a1om03+jDXSh7Skv06J/dLdtHbiIaMVamNKHhKifeUsbS5aJrpYGz00bpJqV3D4DUzVW+s3an/ABqQLQe2HbcBzsiU+SqcISMjxNQPke1jUmbm5y5InKX/AHKohbbp3ulYjVjXlV2ScxzXyovsU+rqqpczgOqJVb7FeuRqyIrUoT7VsRtoRWRFdS6fOVUWVypyoqqpdeiXUT5yb1KVhjkmlbFExz3vXJrWpmqqX/gy0y2nClPb5eSX7NXPT2Odyqnyzy+RtBT8iJhVEa2Ua1Vy3kKDrvTZ9o7eXHoUqKduFXxLMxJEncqtz5U5ipcQ0c1Be6yknYrXsmdzpzpnyL80MSKaaLopXx5+65UOaLdU9afkktCWSHepWi1LL061tNNNQU0MrHyMRznIi55IvMQnBGtlt26GtmhqnU7ayVkixPcrWyO5nKnPkpssE62W3n6dOYVq6pqyVbKSDoLVrRF3nQ5jXbquq2TtxkmLduq6rYu3Ex2YqaDrG7UOaQAQS7QAAAAAAAAAAAAAAAAAAAAAAAAAADoTAOptr7u3cbw0eAdTbX3du43hOZooUvP8Zid5fc1l8sFrvLo3XCmSZY0ybn6jFt2ErFb6yOrpaFkc0a5tcnqN+DN1M5hk7MMZwbXqjeauQ9V5SP3rBlhutUtTU0qpK5c3OYuSu/MkQCoi5zWBNRpd16E5UXqIjHo8wyx6O/RpFy9Tn5opua7D1mrKaGnqKCGSKHo2K3kansQ2mR5MXGp+jvEtSciORzoi1TrNFR4VsNHVx1VNbqeOWNyOY5G8qKhu3I1ycFyIqLznlRkZRqIR401GjqixXKtOdSNXPA+Ha+qWoko+A9y5u4C5ZqYvF1hr/wBaXxCYHjI14NvMS2WxPMajUirTaaCy4Rslnm+2pKRv2vqe/lVPy9hvjyoyNkREzESPMxZh16K5VXrNJfsL2i9ua+vpkdK1MkkbyOy9mZqYNHGHI38J0U0nLmiOfyEyTkPHzMKxq/okwrVnITLjIiom0qvTLSQUVvtdNSxtjhj4SNa1MkQhmCNbLbt0Jzp06K3J+LiC4IVExZbc/wDzoRnp+Z9/ZDlfY6uctVVHbzocxrt1XVbJ24yTFu3VdVsXbiS7MVtB1jdqHNIAIJdoAAAAAAAAAAAAAAAAAAAAAAAAAAB0JgHU2193buN4aPAOptr7u3cbwnM0UKXn+MxO8vuAAbEQAAAAAAAAAAAAAAAAAA195sttu6RpcKZs32f7ufqMKkwlYKWpjqILfGyWNeE1yepTegxdTOSGTcdjLjXqic1VoDGu3VdVsnbjJNBj27w2jDtRI96JLK1WRNz5VVTD1ohmUhuix2MYlVVUOfgAQS6gAAAAAAAAAAAAAAAAAAAAAAAAAACdWTSRW2u001vjtsMjYI0YjlkVFXL5Gbxr1/wqn8VfIrgG19yfs8l9hWe9yudCSq7fksfjXr/hVP4q+Q416/4VT+KvkVwDN93Oa4v2d0SevyWPxr1/wqn8VfIca9f8Kp/FXyK4Avu5xi/Z3RJ6/JY/GvX/AAqn8VfIca9f8Kp/FXyK4Avu5xi/Z3RJ6/JY/GvX/CqfxV8hxr1/wqn8VfIrgC+7nGL9ndEnr8lj8a9f8Kp/FXyHGvX/AAqn8VfIrgC+7nGL9ndEnr8lj8a9f8Kp/FXyHGvX/CqfxV8iuAL7ucYv2d0SevyWPxr1/wAKp/FXyHGvX/CqfxV8iuAL7ucYv2d0SevyWPxr1/wqn8VfIca9f8Kp/FXyK4Avu5xi/Z3RJ6/JYkulW5OjVI7bTscvM7hquX/whl+vVwvdWtRXzrI7+Fv8LU/BDXAwrlXOSZazJSVdegw0RQADUngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH/2Q==" alt="FACQ" style="width:44px;height:44px;border-radius:7px;object-fit:cover"/>
+      <div style="font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(248,246,241,.4)">Note Exécutive CFO · CSRD 2026</div>
+    </div>
+
+    <div>
+      <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--gold2);letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px">Documents annexes</div>
+      <h1 style="font-family:'Libre Baskerville',serif;font-size:44px;font-weight:700;line-height:1.05;color:#fff;letter-spacing:-.02em">Annexes<br/><span style="color:var(--gold3)">CSRD</span></h1>
+      <div style="width:48px;height:2px;background:var(--gold);margin:18px 0"></div>
+      <p style="font-size:13px;font-weight:300;color:rgba(248,246,241,.55);max-width:360px;line-height:1.7">Gaps prioritaires P1 · Cartographie des 385 datapoints · Calculs de risques détaillés · Sources &amp; références</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div style="border:1px solid rgba(248,246,241,.1);padding:14px 16px;border-radius:3px">
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin-bottom:8px">Annexe A</div>
+        <div style="font-family:'Libre Baskerville',serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Gaps prioritaires P1</div>
+        <div style="font-size:11px;color:rgba(248,246,241,.5);line-height:1.5">18 datapoints haute matérialité inexistants · Responsables · Horizon d'action</div>
+      </div>
+      <div style="border:1px solid rgba(248,246,241,.1);padding:14px 16px;border-radius:3px">
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin-bottom:8px">Annexe B</div>
+        <div style="font-family:'Libre Baskerville',serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Cartographie 385 datapoints</div>
+        <div style="font-size:11px;color:rgba(248,246,241,.5);line-height:1.5">Répartition par standard · Statut de disponibilité · Taux de couverture</div>
+      </div>
+      <div style="border:1px solid rgba(248,246,241,.1);padding:14px 16px;border-radius:3px">
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin-bottom:8px">Annexe C</div>
+        <div style="font-family:'Libre Baskerville',serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Calculs de risques détaillés</div>
+        <div style="font-size:11px;color:rgba(248,246,241,.5);line-height:1.5">R1 à R4 · Paramètres exacts · Codes comptables BNB · Fourchettes</div>
+      </div>
+      <div style="border:1px solid rgba(248,246,241,.1);padding:14px 16px;border-radius:3px">
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin-bottom:8px">Annexe D</div>
+        <div style="font-family:'Libre Baskerville',serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Sources &amp; références</div>
+        <div style="font-size:11px;color:rgba(248,246,241,.5);line-height:1.5">Directives · Benchmarks · Études sectorielles · Données internes</div>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;font-family:'DM Mono',monospace;font-size:9px;color:rgba(248,246,241,.25);letter-spacing:.06em">
+      <div>Pamokonda × FACQ Belgium</div>
+      <div>Confidentiel — Usage interne · Mai 2026</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════
+  ANNEXE A — GAPS P1
+  Page 1/2
+══════════════════════ -->
+<div class="page">
+<div class="page-inner">
+  <div class="sec-head" style="margin-top:0">
+    <span class="sec-num">Annexe A</span>
+    <h2>Gaps prioritaires P1 : datapoints haute matérialité inexistants</h2>
+  </div>
+
+  <div class="callout red" style="margin-bottom:14px">
+    <div class="callout-lbl">Définition P1</div>
+    <p>Un gap P1 désigne un datapoint classé en haute matérialité (score DMA ≥ 3,5) pour lequel FACQ ne dispose d'aucune donnée existante ou partielle. Ces 18 datapoints constituent la priorité absolue de collecte avant tout rapport officiel. Chacun correspond à un engagement politique, un objectif chiffré ou une pratique de due diligence absents à ce jour.</p>
+  </div>
+
+  <div class="stat-row" style="--cols:4">
+    <div class="stat-card"><div class="stat-n" style="color:var(--crimson)">18</div><div class="stat-l">Gaps P1 totaux</div><div class="stat-s">Haute mat. inexistants</div></div>
+    <div class="stat-card"><div class="stat-n" style="color:var(--sage)">8</div><div class="stat-l">Standards concernés</div><div class="stat-s">E1 E3 E4 E5 S1 S2 G1</div></div>
+    <div class="stat-card"><div class="stat-n" style="color:var(--amber)">H2 2026</div><div class="stat-l">Horizon prioritaire</div><div class="stat-s">Actions P1 feuille de route</div></div>
+    <div class="stat-card"><div class="stat-n" style="color:var(--navy)">4</div><div class="stat-l">Directions responsables</div><div class="stat-s">DG · Finance · Achats · RH</div></div>
+    <div class="stat-card"><div class="stat-n" style="color:var(--ink)">38</div><div class="stat-l">Datapoints strictement 0</div><div class="stat-s">Politiques + objectifs absents</div></div>
+  </div>
+
+  <div class="sub-head" style="margin-top:0">E1 — Changement climatique (3 gaps P1)</div>
+  <table class="ann-tbl">
+    <thead><tr><th style="width:110px">ID Datapoint</th><th style="width:70px">DR</th><th>Nom du datapoint</th><th style="width:120px">Responsable</th><th style="width:60px">Horizon</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="code">E1.MDR-T_01-13</span></td>
+        <td><span class="dr">E1-4</span></td>
+        <td class="nom">Objectifs chiffrés de réduction des émissions GES (Scope 1, 2 et 3) avec années de référence et cibles intermédiaires</td>
+        <td class="dept">Direction générale / RSE / Finance</td>
+        <td><span class="bdg bdg-p1">H1 2027</span></td>
+      </tr>
+      <tr>
+        <td><span class="code">E1-6_25</span></td>
+        <td><span class="dr">E1-6</span></td>
+        <td class="nom">Pourcentage des émissions Scope 3 calculé à partir de données primaires fournisseurs</td>
+        <td class="dept">RSE / Achats</td>
+        <td><span class="bdg bdg-p1">H2 2026</span></td>
+      </tr>
+      <tr>
+        <td><span class="code">E1-6_26</span></td>
+        <td><span class="dr">E1-6</span></td>
+        <td class="nom">Justification de l'exclusion de certaines catégories Scope 3 du périmètre de reporting</td>
+        <td class="dept">RSE / Achats</td>
+        <td><span class="bdg bdg-p1">H2 2026</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sub-head">E3 — Eau et ressources marines (2 gaps P1)</div>
+  <table class="ann-tbl">
+    <thead><tr><th style="width:110px">ID Datapoint</th><th style="width:70px">DR</th><th>Nom du datapoint</th><th style="width:120px">Responsable</th><th style="width:60px">Horizon</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="code">E3-5_01</span></td>
+        <td><span class="dr">E3-5</span></td>
+        <td class="nom">Effets financiers anticipés des risques matériels liés à l'eau (impacts sur revenus, actifs, coûts)</td>
+        <td class="dept">Finance / DG / RSE</td>
+        <td><span class="bdg bdg-p2">2027</span></td>
+      </tr>
+      <tr>
+        <td><span class="code">E3-5_02</span></td>
+        <td><span class="dr">E3-5</span></td>
+        <td class="nom">Effets financiers anticipés des opportunités liées à l'eau et aux ressources marines</td>
+        <td class="dept">Finance / DG / RSE</td>
+        <td><span class="bdg bdg-p2">2027</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sub-head">E4 — Biodiversité (1 gap P1)</div>
+  <table class="ann-tbl">
+    <thead><tr><th style="width:110px">ID Datapoint</th><th style="width:70px">DR</th><th>Nom du datapoint</th><th style="width:120px">Responsable</th><th style="width:60px">Horizon</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="code">E4.MDR-P_01-06</span></td>
+        <td><span class="dr">E4-2</span></td>
+        <td class="nom">Politiques formalisées pour gérer les impacts, risques et opportunités liés à la biodiversité et aux écosystèmes</td>
+        <td class="dept">RSE / Achats / DG</td>
+        <td><span class="bdg bdg-p2">2027</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sub-head">E5 — Ressources et économie circulaire (6 gaps P1)</div>
+  <table class="ann-tbl">
+    <thead><tr><th style="width:110px">ID Datapoint</th><th style="width:70px">DR</th><th>Nom du datapoint</th><th style="width:120px">Responsable</th><th style="width:60px">Horizon</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="code">E5.MDR-P_01-06</span></td>
+        <td><span class="dr">E5-1</span></td>
+        <td class="nom">Politique formalisée pour gérer les impacts sur les ressources et l'économie circulaire</td>
+        <td class="dept">RSE / Achats / Logistique</td>
+        <td><span class="bdg bdg-p1">H2 2026</span></td>
+      </tr>
+      <tr>
+        <td><span class="code">E5-2_01</span></td>
+        <td><span class="dr">E5-2</span></td>
+        <td class="nom">Actions d'amélioration de l'efficacité des ressources (matières techniques, emballages logistiques)</td>
+        <td class="dept">Logistique / Achats</td>
+        <td><span class="bdg bdg-p1">H2 2026</span></td>
+      </tr>
+      <tr>
+        <td><span class="code">E5-2_03</span></td>
+        <td><span class="dr">E5-2</span></td>
+        <td class="nom">Actions pour promouvoir l'éco-conception des produits distribués par FACQ</td>
+        <td class="dept">Achats / Marketing / Commercial</td>
+        <td><span class="bdg bdg-p1">H2 2026</span></td>
+      </tr>
+      <tr>
+        <td><span class="code">E5-3_02</span></td>
+        <td><span class="dr">E5-3</span></td>
+        <td class="nom">Objectif chiffré d'augmentation de l'éco-conception dans les produits distribués</td>
+        <td class="dept">Achats / Marketing / RSE</td>
+        <td><span class="bdg bdg-p2">2027</span></td>
+      </tr>
+      <tr>
+        <td><span class="code">E5-4_01</span></td>
+        <td><span class="dr">E5-4</span></td>
+        <td class="nom">Description des afflux de ressources matériels significatifs pour FACQ (emballages entrants, matières premières)</td>
+        <td class="dept">Achats / Logistique / RSE</td>
+        <td><span class="bdg bdg-p1">H2 2026</span></td>
+      </tr>
+      <tr>
+        <td><span class="code">E5-4_05</span></td>
+        <td><span class="dr">E5-4</span></td>
+        <td class="nom">Pourcentage de matières secondaires et recyclées dans les produits et emballages distribués</td>
+        <td class="dept">Achats / RSE / Marketing</td>
+        <td><span class="bdg bdg-p2">2027</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<div class="page-footer"><span>FACQ Belgium · Annexes CSRD</span><span class="pf-center">Confidentiel — Mai 2026</span><span>Annexe A · p.1/2</span></div>
+</div>
+
+<!-- ══════════════════════
+  ANNEXE A — GAPS P1
+  Page 2/2
+══════════════════════ -->
+<div class="page">
+<div class="page-inner">
+  <div class="sec-head" style="margin-top:0">
+    <span class="sec-num">Annexe A (suite)</span>
+    <h2>Gaps prioritaires P1 : standards S1, S2 et E5 financier</h2>
+  </div>
+
+  <div class="sub-head" style="margin-top:0">E5 — Effets financiers (1 gap P1)</div>
+  <table class="ann-tbl">
+    <thead><tr><th style="width:110px">ID Datapoint</th><th style="width:70px">DR</th><th>Nom du datapoint</th><th style="width:120px">Responsable</th><th style="width:60px">Horizon</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="code">E5-6_01</span></td>
+        <td><span class="dr">E5-6</span></td>
+        <td class="nom">Effets financiers anticipés des risques et opportunités matériels liés à l'utilisation des ressources et à l'économie circulaire</td>
+        <td class="dept">Finance / DG / RSE</td>
+        <td><span class="bdg bdg-p2">2027</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sub-head">S1 — Personnel propre (2 gaps P1)</div>
+  <table class="ann-tbl">
+    <thead><tr><th style="width:110px">ID Datapoint</th><th style="width:70px">DR</th><th>Nom du datapoint</th><th style="width:120px">Responsable</th><th style="width:60px">Horizon</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="code">S1-14_05</span></td>
+        <td><span class="dr">S1-14</span></td>
+        <td class="nom">Taux d'accidents du travail enregistrables (pour 1 million d'heures travaillées) selon norme ILO</td>
+        <td class="dept">CPPT / Service Prévention</td>
+        <td><span class="bdg bdg-p1">H2 2026</span></td>
+      </tr>
+      <tr>
+        <td><span class="code">S1-14_06</span></td>
+        <td><span class="dr">S1-14</span></td>
+        <td class="nom">Nombre de cas de maladies professionnelles enregistrables chez les employés FACQ</td>
+        <td class="dept">CPPT / Prévention / Médecine du travail</td>
+        <td><span class="bdg bdg-p1">H2 2026</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sub-head">S2 — Travailleurs de la chaîne de valeur (3 gaps P1)</div>
+  <table class="ann-tbl">
+    <thead><tr><th style="width:110px">ID Datapoint</th><th style="width:70px">DR</th><th>Nom du datapoint</th><th style="width:120px">Responsable</th><th style="width:60px">Horizon</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="code">S2.MDR-P_01-06</span></td>
+        <td><span class="dr">S2-1</span></td>
+        <td class="nom">Politiques pour gérer les impacts, risques et opportunités liés aux travailleurs de la chaîne de valeur</td>
+        <td class="dept">Achats / RSE / DG</td>
+        <td><span class="bdg bdg-p1">H2 2026</span></td>
+      </tr>
+      <tr>
+        <td><span class="code">S2-1_01</span></td>
+        <td><span class="dr">S2-1</span></td>
+        <td class="nom">Engagements de la politique en matière de droits humains applicables aux travailleurs de la chaîne de valeur</td>
+        <td class="dept">Achats / Direction juridique / RSE</td>
+        <td><span class="bdg bdg-p1">H2 2026</span></td>
+      </tr>
+      <tr>
+        <td><span class="code">S2-1_06</span></td>
+        <td><span class="dr">S2-1</span></td>
+        <td class="nom">Existence d'un code de conduite fournisseurs avec clause ESG (0% de fournisseurs signataires à ce jour)</td>
+        <td class="dept">Achats / RSE / Direction générale</td>
+        <td><span class="bdg bdg-p1">H2 2026</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout" style="margin-bottom:12px">
+    <div class="callout-lbl">Note sur G1 — DPO vacant</div>
+    <p>Le gap le plus critique en gouvernance n'est pas un datapoint ESRS au sens strict : c'est l'absence de DPO et de responsable RSE/CSRD. Ces deux postes vacants bloquent structurellement la production de tout reporting. Ils constituent un pré-requis à l'ensemble des actions P1 listées ci-dessus et doivent être pourvus en priorité absolue avant H2 2026.</p>
+  </div>
+
+  <div class="sub-head">Lecture d'ensemble : où agir en priorité</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px">
+    <div style="border-left:3px solid var(--crimson);padding:10px 12px;background:var(--paper2);border-radius:0 3px 3px 0">
+      <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--crimson);margin-bottom:5px">Action immédiate</div>
+      <div style="font-size:11px;font-weight:600;color:var(--ink);margin-bottom:4px">Objectifs GES + Code conduite</div>
+      <div style="font-size:10px;color:var(--ink3);line-height:1.45">Les données Greenfish existent. Il manque l'objectif formalisé (E1-4) et le code de conduite fournisseurs (S2-1_06). Deux livrables courts, portée immédiate.</div>
+    </div>
+    <div style="border-left:3px solid var(--amber);padding:10px 12px;background:var(--paper2);border-radius:0 3px 3px 0">
+      <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:5px">H2 2026</div>
+      <div style="font-size:11px;font-weight:600;color:var(--ink);margin-bottom:4px">Politique E5 + Scope 3</div>
+      <div style="font-size:10px;color:var(--ink3);line-height:1.45">La déclaration Recupel existe. Il manque la politique formelle (E5-1). Le Scope 3 est à initier par méthode spend-based sur les 4 catégories prioritaires.</div>
+    </div>
+    <div style="border-left:3px solid var(--navy);padding:10px 12px;background:var(--paper2);border-radius:0 3px 3px 0">
+      <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:5px">2027</div>
+      <div style="font-size:11px;font-weight:600;color:var(--ink);margin-bottom:4px">Effets financiers + biodiversité</div>
+      <div style="font-size:10px;color:var(--ink3);line-height:1.45">Les datapoints E3-5, E5-6 et E4-2 nécessitent des données de marché et des études qui seront disponibles après l'audit énergétique et la collecte Scope 3.</div>
+    </div>
+  </div>
+
+</div>
+<div class="page-footer"><span>FACQ Belgium · Annexes CSRD</span><span class="pf-center">Confidentiel — Mai 2026</span><span>Annexe A · p.2/2</span></div>
+</div>
+
+<!-- ══════════════════════
+  ANNEXE B — CARTOGRAPHIE 385 DATAPOINTS
+══════════════════════ -->
+<div class="page">
+<div class="page-inner">
+  <div class="sec-head" style="margin-top:0">
+    <span class="sec-num">Annexe B</span>
+    <h2>Cartographie des 385 datapoints ESRS : répartition et statut</h2>
+  </div>
+
+  <div class="callout navy" style="margin-bottom:14px">
+    <div class="callout-lbl">Base de référence</div>
+    <p>La cartographie est calée sur le référentiel officiel EFRAG IG3 (List of ESRS Data Points), fichier exhaustif listant tous les datapoints des 12 standards avec références DR/AR, type qualitatif ou quantitatif, obligations et phase-in. Périmètre FACQ : 10 standards thématiques applicables (E1 à E5, S1 à S4, G1). Le fichier Excel complet est disponible sur demande auprès de la direction RSE.</p>
+  </div>
+
+  <div class="sub-head" style="margin-top:0">Répartition par standard et statut de disponibilité</div>
+
+  <div style="border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:14px">
+    <div class="std-row head">
+      <div class="std-cell hd">Standard</div>
+      <div class="std-cell hd">Thématique</div>
+      <div class="std-cell hd" style="text-align:center">Total dp</div>
+      <div class="std-cell hd" style="text-align:center">Haute mat.</div>
+      <div class="std-cell hd" style="text-align:center">Existants</div>
+      <div class="std-cell hd" style="text-align:center">Partiels</div>
+      <div class="std-cell hd" style="text-align:center">Couverture</div>
+    </div>
+    <div class="std-row">
+      <div class="std-cell"><span class="std-e">E1</span></div>
+      <div class="std-cell" style="font-size:10.5px">Changement climatique</div>
+      <div class="std-cell mono" style="text-align:center">51</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--crimson);font-weight:700">27</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--sage)">14</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">12</div>
+      <div class="std-cell">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;font-weight:600;color:var(--sage)">39%</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:39%;background:var(--sage)"></div></div>
+      </div>
+    </div>
+    <div class="std-row">
+      <div class="std-cell"><span class="std-e">E2</span></div>
+      <div class="std-cell" style="font-size:10.5px">Pollution</div>
+      <div class="std-cell mono" style="text-align:center">32</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">8</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--sage)">2</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">6</div>
+      <div class="std-cell">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;font-weight:600;color:var(--amber)">16%</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:16%;background:var(--amber)"></div></div>
+      </div>
+    </div>
+    <div class="std-row">
+      <div class="std-cell"><span class="std-e">E3</span></div>
+      <div class="std-cell" style="font-size:10.5px">Eau et ressources marines</div>
+      <div class="std-cell mono" style="text-align:center">29</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">19</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--sage)">1</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">3</div>
+      <div class="std-cell">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;font-weight:600;color:var(--crimson)">9%</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:9%;background:var(--crimson)"></div></div>
+      </div>
+    </div>
+    <div class="std-row">
+      <div class="std-cell"><span class="std-e">E4</span></div>
+      <div class="std-cell" style="font-size:10.5px">Biodiversité et écosystèmes</div>
+      <div class="std-cell mono" style="text-align:center">34</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">16</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--sage)">1</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">2</div>
+      <div class="std-cell">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;font-weight:600;color:var(--crimson)">6%</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:6%;background:var(--crimson)"></div></div>
+      </div>
+    </div>
+    <div class="std-row">
+      <div class="std-cell"><span class="std-e">E5</span></div>
+      <div class="std-cell" style="font-size:10.5px">Ressources &amp; économie circulaire</div>
+      <div class="std-cell mono" style="text-align:center">40</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--crimson);font-weight:700">35</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--sage)">1</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">6</div>
+      <div class="std-cell">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;font-weight:600;color:var(--crimson)">10%</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:10%;background:var(--crimson)"></div></div>
+      </div>
+    </div>
+    <div class="std-row">
+      <div class="std-cell"><span class="std-g">G1</span></div>
+      <div class="std-cell" style="font-size:10.5px">Conduite des affaires</div>
+      <div class="std-cell mono" style="text-align:center">32</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">8</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--sage)">6</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">4</div>
+      <div class="std-cell">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;font-weight:600;color:var(--amber)">25%</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:25%;background:var(--amber)"></div></div>
+      </div>
+    </div>
+    <div class="std-row">
+      <div class="std-cell"><span class="std-s">S1</span></div>
+      <div class="std-cell" style="font-size:10.5px">Personnel propre</div>
+      <div class="std-cell mono" style="text-align:center">71</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">27</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--sage)">16</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">12</div>
+      <div class="std-cell">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;font-weight:600;color:var(--sage)">31%</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:31%;background:var(--sage)"></div></div>
+      </div>
+    </div>
+    <div class="std-row">
+      <div class="std-cell"><span class="std-s">S2</span></div>
+      <div class="std-cell" style="font-size:10.5px">Travailleurs — chaîne de valeur</div>
+      <div class="std-cell mono" style="text-align:center">37</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">18</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--sage)">1</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">1</div>
+      <div class="std-cell">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;font-weight:600;color:var(--crimson)">4%</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:4%;background:var(--crimson)"></div></div>
+      </div>
+    </div>
+    <div class="std-row">
+      <div class="std-cell"><span class="std-s">S3</span></div>
+      <div class="std-cell" style="font-size:10.5px">Communautés affectées</div>
+      <div class="std-cell mono" style="text-align:center">29</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--ink3)">0</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--sage)">1</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">4</div>
+      <div class="std-cell">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;font-weight:600;color:var(--crimson)">10%</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:10%;background:var(--crimson)"></div></div>
+      </div>
+    </div>
+    <div class="std-row">
+      <div class="std-cell"><span class="std-s">S4</span></div>
+      <div class="std-cell" style="font-size:10.5px">Consommateurs &amp; utilisateurs finaux</div>
+      <div class="std-cell mono" style="text-align:center">30</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--crimson);font-weight:700">21</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--sage)">5</div>
+      <div class="std-cell mono" style="text-align:center;color:var(--amber)">11</div>
+      <div class="std-cell">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;font-weight:600;color:var(--amber)">35%</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:35%;background:var(--amber)"></div></div>
+      </div>
+    </div>
+    <div class="std-row" style="background:var(--paper2);border-top:2px solid var(--ink)">
+      <div class="std-cell" style="font-family:'DM Mono',monospace;font-size:9px;font-weight:700;color:var(--ink)">TOTAL</div>
+      <div class="std-cell" style="font-size:10.5px;font-weight:600;color:var(--ink)">10 standards ESRS</div>
+      <div class="std-cell mono" style="text-align:center;font-weight:700;color:var(--ink)">385</div>
+      <div class="std-cell mono" style="text-align:center;font-weight:700;color:var(--crimson)">179</div>
+      <div class="std-cell mono" style="text-align:center;font-weight:700;color:var(--sage)">48</div>
+      <div class="std-cell mono" style="text-align:center;font-weight:700;color:var(--amber)">61</div>
+      <div class="std-cell">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;font-weight:700;color:var(--amber)">~26%</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:26%;background:linear-gradient(90deg,var(--sage),var(--gold2))"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px">
+    <div style="background:var(--sage3);border:1px solid rgba(31,102,71,.15);border-radius:3px;padding:10px 12px;text-align:center">
+      <div style="font-family:'Libre Baskerville',serif;font-size:24px;font-weight:700;color:var(--sage)">48</div>
+      <div style="font-size:10px;font-weight:500;color:var(--ink);margin-top:3px">Datapoints existants</div>
+      <div style="font-size:9.5px;color:var(--ink3);margin-top:2px">Exploitables sans collecte supplémentaire</div>
+    </div>
+    <div style="background:var(--amber3);border:1px solid rgba(176,96,0,.12);border-radius:3px;padding:10px 12px;text-align:center">
+      <div style="font-family:'Libre Baskerville',serif;font-size:24px;font-weight:700;color:var(--amber)">61</div>
+      <div style="font-size:10px;font-weight:500;color:var(--ink);margin-top:3px">Datapoints partiels</div>
+      <div style="font-size:9.5px;color:var(--ink3);margin-top:2px">À consolider ou formaliser</div>
+    </div>
+    <div style="background:#fdf0f0;border:1px solid rgba(181,40,30,.1);border-radius:3px;padding:10px 12px;text-align:center">
+      <div style="font-family:'Libre Baskerville',serif;font-size:24px;font-weight:700;color:var(--crimson)">276</div>
+      <div style="font-size:10px;font-weight:500;color:var(--ink);margin-top:3px">Datapoints à construire</div>
+      <div style="font-size:9.5px;color:var(--ink3);margin-top:2px">Inexistants ou inconnus</div>
+    </div>
+  </div>
+
+  <p style="font-size:10.5px;color:var(--ink3)">Le fichier Excel complet (Cartographie_Gap_Analysis_FACQ_v3.xlsx) détaille pour chacun des 385 datapoints : l'identifiant EFRAG IG3, la Disclosure Requirement associée, le type qualitatif ou quantitatif, le département détenteur probable, le statut de disponibilité et les réponses des questionnaires départementaux. Il constitue l'outil de pilotage opérationnel de la démarche ESG pour les années 2026–2028.</p>
+</div>
+<div class="page-footer"><span>FACQ Belgium · Annexes CSRD</span><span class="pf-center">Confidentiel — Mai 2026</span><span>Annexe B</span></div>
+</div>
+
+<!-- ══════════════════════
+  ANNEXE C — CALCULS DÉTAILLÉS
+══════════════════════ -->
+<div class="page">
+<div class="page-inner">
+  <div class="sec-head" style="margin-top:0">
+    <span class="sec-num">Annexe C</span>
+    <h2>Calculs de risques détaillés : paramètres et codes comptables</h2>
+  </div>
+
+  <div class="callout navy" style="margin-bottom:14px">
+    <div class="callout-lbl">Source unique</div>
+    <p>Tous les paramètres financiers ci-dessous sont extraits des comptes annuels FACQ SA 2024, dépôt BNB n°2025-00191089, exercice du 01/01/2024 au 31/12/2024, approuvés en AG le 30/05/2025. Les codes renvoient aux comptes de la comptabilité belge (PCMN).</p>
+  </div>
+
+  <div class="sub-head" style="margin-top:0">R1 — Friction opérationnelle</div>
+  <table class="ann-tbl">
+    <thead><tr><th>Paramètre</th><th style="width:150px">Valeur</th><th style="width:180px">Source / Code</th></tr></thead>
+    <tbody>
+      <tr><td>Masse salariale totale</td><td class="mono">54 741 590 €</td><td class="dept">C-cap 6.10, code 62</td></tr>
+      <tr><td>ETP moyen annuel</td><td class="mono">855,4 ETP</td><td class="dept">C-cap 6.10, code 9087</td></tr>
+      <tr><td>Coût moyen chargé par ETP</td><td class="mono">64 000 €/ETP</td><td class="dept">54 741 590 ÷ 855,4</td></tr>
+      <tr><td>Jours ouvrés par an</td><td class="mono">220 jours</td><td class="dept">Convention belge standard</td></tr>
+      <tr><td>Coût journalier moyen</td><td class="mono">290,9 €/jour</td><td class="dept">64 000 ÷ 220</td></tr>
+      <tr><td>Directions impliquées</td><td class="mono">8 directions</td><td class="dept">Gap analysis questionnaires</td></tr>
+      <tr><td>Hypothèse centrale (3j/mois × 8 × 12)</td><td class="mono">288 jours/an</td><td class="dept">Scénario central retenu</td></tr>
+      <tr style="background:var(--amber3)"><td style="font-weight:700">Coût annuel retenu</td><td class="mono" style="font-weight:700;color:var(--amber)">84 000 €/an</td><td class="dept">288 × 290,9 = 83 779 €</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-head">R2 — Dépréciation du parc immobilier</div>
+  <table class="ann-tbl">
+    <thead><tr><th>Paramètre</th><th style="width:150px">Valeur</th><th style="width:180px">Source / Code</th></tr></thead>
+    <tbody>
+      <tr><td>Terrains et constructions</td><td class="mono">35 153 263 €</td><td class="dept">C-cap 3.1, code 22</td></tr>
+      <tr><td>Leasing-financement bâtiments</td><td class="mono">10 196 112 €</td><td class="dept">C-cap 6.3.4, code 25 (détail 250)</td></tr>
+      <tr><td><strong>Total exposition immobilière</strong></td><td class="mono" style="font-weight:700">45 349 375 €</td><td class="dept">35 153 263 + 10 196 112</td></tr>
+      <tr><td>Scénario conservateur (5%)</td><td class="mono" style="color:var(--sage)">2 267 469 €</td><td class="dept">Non-conformité partielle</td></tr>
+      <tr style="background:var(--amber3)"><td style="font-weight:700">Scénario médian retenu (10%)</td><td class="mono" style="font-weight:700;color:var(--crimson)">4 534 938 €</td><td class="dept">Benchmark JLL/CBRE Green Discount</td></tr>
+      <tr><td>Scénario sévère (15%)</td><td class="mono" style="color:var(--crimson)">6 802 406 €</td><td class="dept">Stranded assets avérés</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-head">R3 — Surcoût de financement</div>
+  <table class="ann-tbl">
+    <thead><tr><th>Paramètre</th><th style="width:150px">Valeur</th><th style="width:180px">Source / Code</th></tr></thead>
+    <tbody>
+      <tr><td>Dettes financières CT (établissements de crédit)</td><td class="mono">61 216 697 €</td><td class="dept">C-cap 3.2, code 430/8</td></tr>
+      <tr><td>Dettes financières LT (leasing)</td><td class="mono">8 411 870 €</td><td class="dept">C-cap 3.2, code 172</td></tr>
+      <tr><td><strong>Total exposition bancaire</strong></td><td class="mono" style="font-weight:700">69 628 567 €</td><td class="dept">61 216 697 + 8 411 870</td></tr>
+      <tr><td>Charges de dettes 2023</td><td class="mono">707 801 €</td><td class="dept">C-cap 4, code 650</td></tr>
+      <tr><td>Charges de dettes 2024</td><td class="mono" style="color:var(--crimson)">2 076 582 €</td><td class="dept">C-cap 4, code 650</td></tr>
+      <tr><td>Variation 2023→2024</td><td class="mono" style="color:var(--crimson);font-weight:700">+193,4%</td><td class="dept">(2 076 582 - 707 801) ÷ 707 801</td></tr>
+      <tr style="background:var(--amber3)"><td style="font-weight:700">Scénario retenu (+25 bps)</td><td class="mono" style="font-weight:700;color:var(--amber)">174 071 €/an</td><td class="dept">69 628 567 × 0,25% — BCE 2023</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-head">R4 — Stress test stocks</div>
+  <table class="ann-tbl">
+    <thead><tr><th>Paramètre</th><th style="width:150px">Valeur</th><th style="width:180px">Source / Code</th></tr></thead>
+    <tbody>
+      <tr><td>Stock total marchandises</td><td class="mono">99 281 994 €</td><td class="dept">C-cap 3.1, code 34</td></tr>
+      <tr><td>Marques chauffage / total marques catalogue</td><td class="mono">10 / 61 = 16%</td><td class="dept">facq.be/fr/nos-marques</td></tr>
+      <tr><td>Hypothèse d'exposition retenue (prudente)</td><td class="mono">10% du stock</td><td class="dept">Inférieur aux 16% — conservatisme</td></tr>
+      <tr><td>Segment exposé estimé</td><td class="mono">9 928 199 €</td><td class="dept">99 281 994 × 10%</td></tr>
+      <tr><td>Scénario prudent (2%)</td><td class="mono" style="color:var(--sage)">198 564 €</td><td class="dept">9 928 199 × 2%</td></tr>
+      <tr style="background:var(--amber3)"><td style="font-weight:700">Scénario médian retenu (5%)</td><td class="mono" style="font-weight:700;color:var(--amber)">496 410 €</td><td class="dept">9 928 199 × 5%</td></tr>
+      <tr><td>Scénario sévère (10%)</td><td class="mono" style="color:var(--crimson)">992 820 €</td><td class="dept">9 928 199 × 10%</td></tr>
+    </tbody>
+  </table>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px">
+    <div style="border:1px solid var(--rule);border-radius:3px;padding:10px 12px;background:var(--paper2)">
+      <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink4);margin-bottom:6px">Vérification benchmark EFRAG</div>
+      <div style="font-size:10.5px;color:var(--ink2);line-height:1.6">383 866 528 € (CA 2024) × 0,06% = <strong>230 320 €</strong><br/>Cohérent avec la valeur centrale EFRAG Impact Assessment 2022 (fourchette 0,04% à 0,10% du CA pour les ETI).</div>
+    </div>
+    <div style="border:1px solid var(--rule);border-radius:3px;padding:10px 12px;background:var(--paper2)">
+      <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink4);margin-bottom:6px">Ratio de protection final</div>
+      <div style="font-size:10.5px;color:var(--ink2);line-height:1.6">5 289 348 € ÷ 230 000 € = <strong style="color:var(--gold)">22,99 ≈ 1:23</strong><br/>Plancher conservateur excluant récurrents (+258 000 €/an) et scénarios sévères (8,2M€+).</div>
+    </div>
+  </div>
+
+</div>
+<div class="page-footer"><span>FACQ Belgium · Annexes CSRD</span><span class="pf-center">Confidentiel — Mai 2026</span><span>Annexe C</span></div>
+</div>
+
+<!-- ══════════════════════
+  ANNEXE D — SOURCES
+══════════════════════ -->
+<div class="page">
+<div class="page-inner">
+  <div class="sec-head" style="margin-top:0">
+    <span class="sec-num">Annexe D</span>
+    <h2>Sources et références</h2>
+  </div>
+
+  <div class="sub-head" style="margin-top:0">Données internes FACQ</div>
+  <table class="ann-tbl">
+    <thead><tr><th>Source</th><th>Utilisation</th><th style="width:120px">Référence</th></tr></thead>
+    <tbody>
+      <tr><td class="nom">Comptes annuels FACQ SA 2024</td><td class="dept">Tous les chiffres financiers : masse salariale, stocks, immobilier, dettes, CA, résultat net</td><td class="dr">BNB n°2025-00191089</td></tr>
+      <tr><td class="nom">Rapport GES Greenfish</td><td class="dept">Bilan carbone Scope 1 et Scope 2 : 5 752 tCO2e, référence 2019, protocole GHG</td><td class="dr">Septembre 2022</td></tr>
+      <tr><td class="nom">Questionnaires gap analysis (8 directions)</td><td class="dept">Disponibilité des données, taux de couverture par standard, réponses des questionnaires nominatifs</td><td class="dr">Mars–mai 2026</td></tr>
+      <tr><td class="nom">Données RH SD Worx / Mpleo</td><td class="dept">843,8 FTE CDI, turnover 14%, gender pay gap, formation 20h/FTE, budget 206K€</td><td class="dr">Ditke Van Goethem, 12/05/2026</td></tr>
+      <tr><td class="nom">Catalogue marques FACQ</td><td class="dept">Structure du portefeuille : 10 marques chauffage sur 61 références totales</td><td class="dr">facq.be/fr/nos-marques</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-head">Textes réglementaires</div>
+  <table class="ann-tbl">
+    <thead><tr><th>Texte</th><th>Utilisation</th><th style="width:120px">Référence</th></tr></thead>
+    <tbody>
+      <tr><td class="nom">Directive CSRD</td><td class="dept">Cadre général du reporting de durabilité, architecture ESRS, double matérialité</td><td class="dr">UE 2022/2464, 5 jan. 2023</td></tr>
+      <tr><td class="nom">Omnibus I</td><td class="dept">Nouveaux seuils d'application (>1 000 sal. ET >450M€ CA), exemption FACQ</td><td class="dr">Directive UE 2026/470, 18 mars 2026</td></tr>
+      <tr><td class="nom">LkSG</td><td class="dept">Obligation de diligence raisonnable de GC-Gruppe sur sa chaîne de valeur incluant FACQ</td><td class="dr">Lieferkettensorgfaltspflichtengesetz, 1 jan. 2023</td></tr>
+      <tr><td class="nom">CSDDD</td><td class="dept">Horizon réglementaire européen 2027–2029, responsabilité civile directe</td><td class="dr">Directive UE, printemps 2024</td></tr>
+      <tr><td class="nom">Directive EPBD révisée</td><td class="dept">Obligation de rénovation des 16% de bâtiments les moins performants d'ici 2030 (risque R2)</td><td class="dr">2024/1275, JOUE</td></tr>
+      <tr><td class="nom">VSME</td><td class="dept">Standard volontaire PME, modules B3–B11, corrélation avec CSRD pour FACQ</td><td class="dr">Recommandation Commission UE, 30 juil. 2025</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-head">Benchmarks et études sectorielles</div>
+  <table class="ann-tbl">
+    <thead><tr><th>Source</th><th>Utilisation</th><th style="width:120px">Référence</th></tr></thead>
+    <tbody>
+      <tr><td class="nom">EFRAG IG3 — List of ESRS Data Points</td><td class="dept">Cartographie des 385 datapoints : identifiants, DR/AR, types, obligations, phase-in</td><td class="dr">efrag.eu — Set 1</td></tr>
+      <tr><td class="nom">EFRAG Impact Assessment 2022</td><td class="dept">Fourchette de coût de conformité : 0,04% à 0,10% du CA pour les ETI</td><td class="dr">efrag.eu, 2022</td></tr>
+      <tr><td class="nom">BCE — Risques climatiques secteur bancaire</td><td class="dept">Justification du scénario +25 bps de surcoût de financement sans données ESG</td><td class="dr">ecb.europa.eu, rapport 2023</td></tr>
+      <tr><td class="nom">JLL / CBRE — Green Discount studies</td><td class="dept">Taux de dépréciation des actifs immobiliers non conformes aux standards énergétiques (5–15%)</td><td class="dr">Rapports sectoriels 2023</td></tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:20px;padding-top:14px;border-top:2px solid var(--ink);display:flex;justify-content:space-between;align-items:flex-end">
+    <div>
+      <div style="font-family:'Libre Baskerville',serif;font-size:15px;font-weight:700">Pamokonda × FACQ Belgium</div>
+      <div style="font-size:10.5px;color:var(--ink3);margin-top:3px">Annexes CSRD · Double Matérialité · Gap Analysis · Mai 2026</div>
+    </div>
+    <div style="text-align:right;font-family:'DM Mono',monospace;font-size:9px;color:var(--ink4)">
+      <div>Confidentiel — Usage interne FACQ Belgium</div>
+      <div style="margin-top:2px">Mission d'analyse ESG/CSRD · Belgique · 2026</div>
+    </div>
+  </div>
+</div>
+<div class="page-footer"><span>FACQ Belgium · Annexes CSRD</span><span class="pf-center">Confidentiel — Mai 2026</span><span>Annexe D</span></div>
+</div>
+
+
+<!-- ══════════════════════
+  ANNEXE E — QR CODE CARTOGRAPHIE
+══════════════════════ -->
+<div class="page">
+<div class="page-inner" style="justify-content:center;align-items:center;display:flex;flex-direction:column;gap:0">
+
+  <div class="sec-head" style="margin-top:0;width:100%">
+    <span class="sec-num">Annexe E</span>
+    <h2>Cartographie interactive des 385 datapoints</h2>
+  </div>
+
+  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;width:100%">
+
+    <!-- QR CODE + cadre -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px">
+      <div style="background:var(--ink);border-radius:8px;padding:20px;display:inline-flex;flex-direction:column;align-items:center;gap:14px;box-shadow:0 4px 24px rgba(13,17,23,.18)">
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2)">Cartographie ESRS Interactive</div>
+        <div style="background:#f8f6f1;border-radius:4px;padding:12px;display:inline-block">
+          <img src="data:image/png;base64,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" alt="QR Code cartographie ESRS FACQ" style="width:160px;height:160px;display:block"/>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:8px;color:rgba(248,246,241,.4);letter-spacing:.08em;text-align:center">
+          venerable-valkyrie-56c0ca.netlify.app
+        </div>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div style="max-width:420px;text-align:center">
+      <div style="font-family:'Libre Baskerville',serif;font-size:16px;font-weight:700;color:var(--ink);margin-bottom:10px">385 datapoints ESRS — accès complet</div>
+      <p style="font-size:11.5px;color:var(--ink3);line-height:1.7;margin-bottom:16px">Scannez ce code pour accéder à la cartographie interactive complète des datapoints ESRS applicables à FACQ Belgium. Navigation par standard, filtres par matérialité et disponibilité, justifications méthodologiques et réponses du gap analysis intégrées.</p>
+    </div>
+
+    <!-- Fonctionnalités -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;max-width:480px">
+      <div style="border:1px solid var(--rule);border-left:3px solid var(--sage);padding:10px 12px;border-radius:0 3px 3px 0;background:var(--paper2)">
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);margin-bottom:4px">Navigation</div>
+        <div style="font-size:11px;color:var(--ink2);line-height:1.5">10 standards ESRS · Sidebar cliquable · Compteur en temps réel</div>
+      </div>
+      <div style="border:1px solid var(--rule);border-left:3px solid var(--navy);padding:10px 12px;border-radius:0 3px 3px 0;background:var(--paper2)">
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin-bottom:4px">Filtres</div>
+        <div style="font-size:11px;color:var(--ink2);line-height:1.5">Matérialité · Disponibilité · Recherche texte libre</div>
+      </div>
+      <div style="border:1px solid var(--rule);border-left:3px solid var(--gold);padding:10px 12px;border-radius:0 3px 3px 0;background:var(--paper2)">
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">Détail par ligne</div>
+        <div style="font-size:11px;color:var(--ink2);line-height:1.5">Justification FACQ · Réponse gap analysis · Département</div>
+      </div>
+      <div style="border:1px solid var(--rule);border-left:3px solid var(--crimson);padding:10px 12px;border-radius:0 3px 3px 0;background:var(--paper2)">
+        <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson);margin-bottom:4px">Gaps P1</div>
+        <div style="font-size:11px;color:var(--ink2);line-height:1.5">Filtre Haute + Inexistante → 18 gaps prioritaires immédiats</div>
+      </div>
+    </div>
+
+    <!-- URL texte -->
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--ink4);background:var(--paper2);padding:8px 16px;border-radius:2px;border:1px solid var(--rule)">
+      https://venerable-valkyrie-56c0ca.netlify.app/
+    </div>
+
+  </div>
+
+</div>
+<div class="page-footer"><span>FACQ Belgium · Annexes CSRD</span><span class="pf-center">Confidentiel — Mai 2026</span><span>Annexe E</span></div>
+</div>
+
+</body>
+</html>
