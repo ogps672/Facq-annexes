@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 <style>
 /* ── Palette ── */
 :root {
@@ -1111,14 +1112,14 @@ h2 { font-family: 'Libre Baskerville', serif; font-size: 19px; font-weight: 700;
 
   <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;width:100%">
 
-    <!-- QR code -->
+    <!-- QR code généré dynamiquement -->
     <div style="display:flex;flex-direction:column;align-items:center;gap:16px">
       <div style="background:var(--ink);border-radius:8px;padding:20px;display:inline-flex;flex-direction:column;align-items:center;gap:14px;box-shadow:0 4px 24px rgba(13,17,23,.18)">
         <div style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2)">Cartographie ESRS Interactive</div>
         <div style="background:#f8f6f1;border-radius:4px;padding:12px;display:inline-block">
-          <img src="data:image/png;base64,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" alt="QR Code cartographie ESRS FACQ" style="width:160px;height:160px;display:block"/>
+          <div id="qrcode"></div>
         </div>
-        <div style="font-family:'DM Mono',monospace;font-size:8px;color:rgba(248,246,241,.4);letter-spacing:.08em;text-align:center">venerable-valkyrie-56c0ca.netlify.app</div>
+        <div style="font-family:'DM Mono',monospace;font-size:8px;color:rgba(248,246,241,.4);letter-spacing:.08em;text-align:center">statuesque-pothos-4287b9.netlify.app</div>
       </div>
       <p style="font-size:12px;color:var(--ink3);text-align:center;max-width:280px;margin:0">385 datapoints ESRS — accès complet à la cartographie interactive</p>
     </div>
@@ -1150,7 +1151,7 @@ h2 { font-family: 'Libre Baskerville', serif; font-size: 19px; font-weight: 700;
 
     <!-- URL -->
     <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--ink4);background:var(--paper2);padding:8px 16px;border-radius:2px;border:1px solid var(--rule)">
-      https://venerable-valkyrie-56c0ca.netlify.app/
+      https://statuesque-pothos-4287b9.netlify.app/
     </div>
 
   </div>
@@ -1163,5 +1164,15 @@ h2 { font-family: 'Libre Baskerville', serif; font-size: 19px; font-weight: 700;
 </div>
 </div>
 
+<script>
+  new QRCode(document.getElementById("qrcode"), {
+    text: "https://statuesque-pothos-4287b9.netlify.app/",
+    width: 160,
+    height: 160,
+    colorDark: "#0d1117",
+    colorLight: "#f8f6f1",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+</script>
 </body>
 </html>
